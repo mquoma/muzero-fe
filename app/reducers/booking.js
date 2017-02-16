@@ -16,8 +16,8 @@ const actionHandlers = {
   ['RECEIVE_PENDING_USER_REQUESTS']: ( state, action) => ({
   	pendingRequests: action.pendingRequests
   }),
-  ['SET_TIER']: ( state, action) => ({
-  	tierId: action.tierId
+  ['RECEIVE_ALL_USER_REQUESTS']: ( state, action) => ({
+  	allRequests: action.allRequests
   }),
   ['SET_BOOKER_ID']: ( state, action) => ({
   	bookerId: action.bookerId

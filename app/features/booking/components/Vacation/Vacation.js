@@ -46,12 +46,12 @@ export default class Vacation extends Component {
           <h2>Employee Vacation Request Form</h2>
         </header>
         <main>
-          <div class="alt-font balance">@mquoma, your vacation balance is <span class="bold">15 days</span></div>
-          <article class="approved">
+          <div class="alt-font balance">@mquoma, your vacation balance is <span className="bold">15 days</span></div>
+          <article className="approved">
             <h3>Approved requests: <span class="bold">0</span></h3>
           </article>
-          <article class="pending">
-            <h3>Pending requests: <span class="bold">
+          <article className="pending">
+            <h3>Pending requests: <span className="bold">
 
               {
                 this.props.vacationState &&
@@ -64,7 +64,7 @@ export default class Vacation extends Component {
               <thead>
               <tr>
                 <th>Start Dates</th>
-                <th class="days">Requested Number of Days</th>
+                <th className="days">Requested Number of Days</th>
               </tr>
               </thead>
               <tbody>

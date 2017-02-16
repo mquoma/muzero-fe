@@ -21,18 +21,18 @@ export function getUserDaysLeft (user) {
 }
 
 
-export function getUserPendingRequests (user) {
+export function getAllUserRequests (user) {
 
   return dispatch => {
 
-    axios.get(`${baseUrl}/User/Requests/` + user)
+    axios.get(`${baseUrl}/Directors/Requests/` + user)
     .then(function (response) {
       const data = response.data;
       console.log('data');
       console.log(data);
       dispatch({
-        type: 'RECEIVE_PENDING_USER_REQUESTS',
-        pendingRequests: data
+        type: 'RECEIVE_ALL_USER_REQUESTS',
+        allRequests: data
       });
     });
   };

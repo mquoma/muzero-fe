@@ -2,7 +2,8 @@ import React, { Component, PropTypes } from 'react';
 
 
 import {
-  getUserDaysLeft
+  getUserDaysLeft,
+  getUserPendingRequests
 } from '../../actions/muzero';
 
 export default class Vacation extends Component {
@@ -24,6 +25,8 @@ export default class Vacation extends Component {
     console.log('d');
 
     dispatch(getUserDaysLeft('U067SS9KR'));
+    dispatch(getUserPendingRequests('U067SS9KR'));
+
 
   }
 
@@ -39,13 +42,23 @@ export default class Vacation extends Component {
     return (
       <div>
         <h4>
-        days left
-        </h4>
         {
           this.props.vacationState &&
           this.props.vacationState.daysLeft &&
-          this.props.vacationState.daysLeft.DaysAvail
+          (this.props.vacationState.daysLeft.DaysAvail + ' Days Left')
         }
+        </h4>
+        <ul>
+        {
+          this.props.vacationState &&
+          this.props.vacationState.pendingRequests &&
+          this.props.vacationState.pendingRequests.map( function (p) {
+            return ( 
+              <li> {p.DateRequested} -  {p.RequestStatus} -  {p.NumDays} </li>
+              )
+          })
+        }
+        </ul>
       </div>
     );
   }

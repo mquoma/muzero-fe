@@ -42,6 +42,8 @@ export default class Vacation extends Component {
         days left
         </h4>
         {
+          this.props.vacationState &&
+          this.props.vacationState.daysLeft &&
           this.props.vacationState.daysLeft.DaysAvail
         }
       </div>

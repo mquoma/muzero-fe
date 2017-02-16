@@ -5,7 +5,7 @@ import {
   getUserDaysLeft
 } from '../../actions/muzero';
 
-export default class SingleRoomBooking extends Component {
+export default class Vacation extends Component {
   constructor (props) {
     super(props);
   };

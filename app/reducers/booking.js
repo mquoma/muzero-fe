@@ -13,8 +13,8 @@ const actionHandlers = {
   ['RECEIVE_DAYS_LEFT']: ( state, action) => ({
   	daysLeft: action.daysLeft
   }),
-  ['SET_OCCUPANCY_ID']: ( state, action) => ({
-  	occupancyId: action.occupancyId
+  ['RECEIVE_PENDING_USER_REQUESTS']: ( state, action) => ({
+  	pendingRequests: action.pendingRequests
   }),
   ['SET_TIER']: ( state, action) => ({
   	tierId: action.tierId

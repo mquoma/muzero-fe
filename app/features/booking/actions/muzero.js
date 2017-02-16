@@ -1,14 +1,14 @@
 import axios from 'axios';
 import apiconfig from '../../../utilities/apiconfig'
 
-let baseUrl = 'http://localhost:3000/';
+let baseUrl = 'http://localhost:3000';
 
 
 export function getUserDaysLeft (user) {
 
   return dispatch => {
 
-    axios.get(`${baseUrl}/User/Requests/` + eventId)
+    axios.get(`${baseUrl}/User/` + user)
     .then(function (response) {
       const data = response.data;
       console.log('data');

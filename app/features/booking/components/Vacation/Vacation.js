@@ -21,9 +21,9 @@ export default class Vacation extends Component {
 
     const { dispatch } = this.props;
 
-    let eventId = 1;
-    let bookerId = 1;
+    console.log('d');
 
+    dispatch(getUserDaysLeft('U067SS9KR'));
 
   }
 
@@ -39,7 +39,11 @@ export default class Vacation extends Component {
     return (
       <div>
         <h4>
+        days left
         </h4>
+        {
+          this.props.vacationState.daysLeft.DaysAvail
+        }
       </div>
     );
   }

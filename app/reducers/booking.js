@@ -10,8 +10,8 @@ const actionHandlers = {
   	currentAction: action.currentAction
   }),
 
-  ['RECEIVE_OCCUPANCY_TYPES']: ( state, action) => ({
-  	occupancyTypes: action.occupancyTypes
+  ['RECEIVE_DAYS_LEFT']: ( state, action) => ({
+  	daysLeft: action.daysLeft
   }),
   ['SET_OCCUPANCY_ID']: ( state, action) => ({
   	occupancyId: action.occupancyId

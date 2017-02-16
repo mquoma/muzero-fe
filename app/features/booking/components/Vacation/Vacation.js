@@ -46,49 +46,46 @@ export default class Vacation extends Component {
           <h2>Employee Vacation Request Form</h2>
         </header>
         <main>
-          <div class="alt-font balance">@mike, your vacation balance is <span class="bold">15 days</span></div>
+          <div class="alt-font balance">@mquoma, your vacation balance is <span class="bold">15 days</span></div>
           <article class="approved">
             <h3>Approved requests: <span class="bold">0</span></h3>
           </article>
           <article class="pending">
-            <h3>Pending requests: <span class="bold">5 days</span></h3>
+            <h3>Pending requests: <span class="bold">
+
+              {
+                this.props.vacationState &&
+                this.props.vacationState.daysLeft &&
+                (this.props.vacationState.daysLeft.DaysAvail + ' ')
+              }
+
+             days</span></h3>
             <table>
               <thead>
               <tr>
-                <th>Dates</th>
+                <th>Start Dates</th>
                 <th class="days">Requested Number of Days</th>
               </tr>
               </thead>
               <tbody>
-              <tr>
-                <td>3/6/2017 - 3/8/2017</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>5/22/2017 - 5/23/2017</td>
-                <td>2</td>
-              </tr>
-              </tbody>
-            </table>
-          </article>
-        </main>
-        <h4>
-        {
-          this.props.vacationState &&
-          this.props.vacationState.daysLeft &&
-          (this.props.vacationState.daysLeft.DaysAvail + ' Days Left')
-        }
-        </h4>
-        <ul>
+
         {
           this.props.vacationState &&
           this.props.vacationState.pendingRequests &&
           this.props.vacationState.pendingRequests.map( function (p) {
             return ( 
-              <li> {p.DateRequested} -  {p.RequestStatus} -  {p.NumDays} </li>
+              <tr>
+                <td>{ p.DateRequested }</td>
+                <td>{ p.NumDays }</td>
+              </tr>
               )
           })
         }
+              </tbody>
+            </table>
+          </article>
+        </main>
+        <ul>
         </ul>
       </div>
     );

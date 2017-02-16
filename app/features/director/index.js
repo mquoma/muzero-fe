@@ -1,9 +1,9 @@
 module.exports = {
-  path: 'booking',
-
+  path: 'director',
   getComponent (location, cb) {
     require.ensure([], (require) => {
-      cb(null, require('./components/Vacation/Vacation').default);
+      cb(null, require('./components/VacationDirector').default);
     });
   }
 };
+

@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import '../../../../css/global.css';
+import '../../../css/global.css';
 
 import {
   getUserDaysLeft
-} from '../../actions/muzero';
+} from '../actions/muzero';
 
 export default class VacationDirector extends Component {
   constructor (props) {

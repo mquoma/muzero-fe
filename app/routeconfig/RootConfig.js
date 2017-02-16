@@ -18,7 +18,8 @@ export const RootRoute = {
     },    require('../features/error-pages'),
     {
       childRoutes: [
-        require('../features/booking')
+        require('../features/booking'),
+        require('../features/director')
       ]
     }
   ]
